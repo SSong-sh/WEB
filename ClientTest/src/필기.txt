@@ -1,0 +1,162 @@
+필기.txt
+
+1. JDK 11 설치
+	- 확인
+	- $ java.exe --version //JRE
+	- $ javac.exe --version //JDK
+	
+2. 환경 변수 수정
+	- JAVA_HOME > C:\class\dev\jdk-21
+			   > C:\class\dev\jdk-11
+	- Path > %JAVA_HOME%\bin
+
+3. 이클립스 EE 확인
+	- C:\class\dev\eclipse\eclipse.ini
+
+4. 크롬 설치 > 기본 브라우저 설정 확인
+	> 윈도우키 > "기본 앱"
+
+5. eclipse.ini 수정 > JDK 11 변경
+
+6. 워크 스페이스
+	- C:\class\code\client
+	- Window > Preferences > "encoding"
+		- Workspace > "UTF-8"
+		- CSS Files > "UTF-8"
+		- HTML Files > "UTF-8"
+		- JSP Files > "UTF-8"
+
+7. tomcat 설치
+	- http://apache.org
+	- http://tomcat.apache.org
+		- 64-bit Windows zip
+	- C:\class\dev\apache-tomcat-8.5.99
+
+8. 새 프로젝트
+	- File > New > Dynamic Web Project
+		> "ClientTest"
+
+
+
+
+
+
+
+
+Client
+- Front-end
+
+1. HTML
+2. CSS
+3. JavaScript
+
+
+
+Web ?
+- WWW > World Wide Web
+- http://www.naver.com
+
+
+Network
+- 2대 이상의 컴퓨터를 서로 연결해놓은 환경
+- 통신 가능한 환경
+- 관리하는 주체가 있음
+
+Internet
+- inter-network
+- 전세계의 모든 컴퓨터를 서로 연결해놓은 환경
+- 관리하는 주체가 없음
+
+Web
+- 인터넷 기반
+- 서로간의 정보(문서)를 주고 받은 환경
+
+
+우리의 목적
+- Web 기반의 서비스 구현
+
+
+Database 서비스
+- 서버: 오라클
+- 클라이언트: SQL Developer
+
+
+Web 서비스 구성
+- 웹클라이언트 <-> 웹서버
+- 웹서버: 문서를 제공함 > 아파치 톰캣
+- 웹클라이언트: 문서를 요청 + 제공받음(소비) > 웹 브라우저(크롬)
+
+http://www.naver.com/member/list.html?name=hong&age=10&gender=f -url
+
+1. http:
+	- 프로토콜(Protocol) > 통신 규약
+	- 서로간의 데이터를 주고 받을 때 사용하는 규칙 (약속)
+	- HyperText(HTML) Transfer Protocol
+	- http:
+	- https: + 보안(security)
+
+
+2. www.naver.com
+	- Domain Address
+	- 도메인 주소
+	- 서버 컴퓨터(호스트)의 주소
+	- IP Address 사용
+	
+3. IP
+	- 인터넷에서 호스트를 구분하는 고유 주소값 (전세계에서 유일한 값)
+	- XXX.XXX.XXX.XXX > IPv4
+	- http://223.13.200.236
+
+4. DNS
+	- Domain Name System
+	- DNS Server
+	- http://www.naver.com > (변환) > http://223.13.200.236
+
+
+5. Port Number
+	- 네트워크를 사용하는 프로그램이 사용하는 통로
+	- 0 ~ 65535
+	- 독점
+	- ~ 1000 : 예약 포트 넘버
+	- http: > :80 번호(기본)
+	- https: > 443 번호 (기본)
+	
+6. IP: 80
+	- 상대방의 컴퓨터 + 프로그램 = 식별자
+	- 종단점(EndPoing)
+	
+7./member
+	- 자원의 경로(폴더)
+
+8. /list.html
+	- 자원명(파일명)
+
+9. ?name=hong&age=10&gender=f
+	- Query String
+	- name=hong
+		- name : Parameter
+		- hong : Value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

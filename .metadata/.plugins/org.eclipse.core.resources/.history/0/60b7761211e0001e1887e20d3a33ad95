@@ -1,0 +1,51 @@
+Client 
+- Front-end
+
+1. HTML
+2. CSS
+3. JavaScript
+
+WEB ?
+- WWW > World Wide Web
+- http: //ww.naver.com
+
+
+Network
+- 2대 이상의 컴퓨터를 서로 연결해놓은 환경
+- 통신 가능한 환경
+
+Internet
+- inter-network
+- 전세계의 모든 컴퓨터를 서로 연결해놓은 환경
+- 관리하는 주체가 없음
+
+Web
+- 인터넷 기반
+- 서로간의 정보(문서)를 주고 받는 환경
+
+
+우리의 목적
+- Web 기반의 서비스 구현
+
+
+Database 서비스
+- 서버 : 오라클
+- 클라이언트 : sql Developer
+
+
+Web 서비스 구성
+- 웹 클라이언트 <-> 웹 서버
+- 웹 서버 : 문서를 제공 > 아파치 톰캣
+- 웹 클라이언트 : 문서를 요청 + 제공받음 (소비) > 웹 브라우저(크롬)
+
+
+
+
+
+
+
+
+
+
+
+
