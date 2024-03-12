@@ -136,7 +136,20 @@ http://www.naver.com/member/list.html?name=hong&age=10&gender=f -url
 	- name=hong
 		- name : Parameter
 		- hong : Value
+		
+		
+Java 개발 및 실행 환경
+- 개발: JDK
+- 실행: JRE
 
+HTML/CSS/JavaScript 실행(개발) 환경
+- 실행: 브라우저
+
+
+src > main > webapp
+- 아파치 톰캣 구조
+- 루트 폴더
+- 웹 사이트를 구성하는 자원들의 최상의 폳러
 
 
 
