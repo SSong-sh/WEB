@@ -3,8 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+
+	h1 {
+		font-weight: normal;
+		font-size: 16px
+	}
+
+/* 	ol > li, ul > li {
+		display :inline;
+	} */
+
+</style>
 </head>
 <body>
+	<!-- ex11_list.html -->
+	
+	<!-- 
+	
+		list, 목록
+		1. <ol> + <li>
+			 - <ol>: Ordered List, 순서가 있는 목록
+			 - <li>: List Item, 항목
+		
+		2. <ul> + <li>
+			 - <ul>: Unordered List, 순서가 없는 목록
+			 - <li>: List Item, 항목
+		
+		3. <dl> + <dt> + <dd>	
+			- 용어 정의 목록
+			- <dl> : Definition List, 정의 목록
+			- <dt> : Definition Term, 용어
+			- <dd> : Definition Description, 용어 설명
+	 -->
+	
+	<h1>오늘의 할일</h1>
+	
+	<ol type="A">
+		<li>강아지 목욕</li>
+		
+		<li>
+			강아지 건강검진 예약 변경
+			<ol type="a">
+				<li>병원에 전화하기</li>
+				<li>날짜 정하기</li>
 
+			</ol>
+		</li>
+		
+		<li>알고리즘 공부</li>
+		<li>자바 문제 풀기</li>
+		<li>스프링 강의듣기</li>	
+	</ol>
+	
+	<h1>오늘의 할일</h1>
+	
+	<!-- 쩜 > bullet -->
+	<ul type="square">
+		<li>강아지 목욕</li>
+		<li>강아지 건강검진 예약 변경</li>
+		<li>알고리즘 공부</li>
+		<li>자바 문제 풀기</li>
+		<li>스프링 강의듣기</li>	
+	</ul>
+	
+	
+	<hr>
+	
+	<h1>내일의 할일</h1>
+	
+	
+	<ol>
+		<li>자바 공부</li>
+		<li>오라클 공부</li>
+		<li>HTML 공부</li>
+		<li>CSS 공부</li>
+		<li>JavaScript 공부</li>
+	</ol>
+	
+	<p>아래의 공부는 다음주까지 해도 괜찮음</p>
+	
+	<ol start="6">
+		<li>Servlet 공부</li>
+		<li>JSP 공부</li>
+	</ol>
+	
+	
+		<h1>내일의 할일</h1>
+	
+	
+	<ol reversed start="10">
+		<li>자바 공부</li>
+		<li>오라클 공부</li>
+		<li>HTML 공부</li>
+		<li>CSS 공부</li>
+		<li>JavaScript 공부</li>
+	</ol>
+	
+	
+	<h1> 자바 용어</h1>
+	
+	<dl>
+		<dt>클래스</dt>
+		<dd>클래스는 어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구
+		어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구</dd>
+		<dt>메서드</dt>
+		<dd>메서드는 어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구
+		어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구</dd>
+		<dt>생성자</dt>
+		<dd>생성자는 어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구
+		어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구</dd>
+	</dl>
+	
+	
+	
+	
 </body>
 </html>
