@@ -11,8 +11,355 @@
 
         Emmet, Zen-Coding
         - 대부분 편집기들이 제공하는 확장 기능
-
+        - CSSS 선택자를 사용해서 > HTML(css) 코드를 빠르게 작성하는 기능
+        - http://emmet.io
      -->
     
+     <h1>태그 선택자</h1>
+
+     <div></div>
+     <span></span>
+     <a href="ex01.html"></a>
+     <a href="ex01.html">네이버</a>
+     <input type="text">
+     <img src="../html/images/0.png" alt="텍스트">
+
+     <h1>아이디 선택자</h1>
+     
+     <div id="box"></div>
+
+     img.pet{}
+     <img src="" alt="" class="pet"></img>
+     
+     div.one.two {}
+     <div class="one two"></div>
+
+
+
+     <h1>속성 선택자</h1>
+     div[title]
+     <div title=""></div>
+
+    div[title='box'] {}
+    <div title="box"></div>
+
+    img[width]
+    <img src="" alt="" width="">
+    
+    <img src="" alt="" width="" height="">
+
+    <h1>PCDATA</h1>
+
+    div{상자}
+    <div>상자</div>
+
+    div#box1.box[title=상자]{상자입니다.}
+    <div id="box1" class="box" title="상자">상자입니다.</div>
+
+    div*5
+    <div>하나</div>
+    <div>둘</div>
+    <div>셋</div>
+    <div>넷</div>
+    <div>다섯</div>
+
+    div{상자입니다.}*5
+    <div>상자입니다.</div>
+    <div>상자입니다.</div>
+    <div>상자입니다.</div>
+    <div>상자입니다.</div>
+    <div>상자입니다.</div>
+
+     div[title].item{상자입니다.}*5
+     <div title="" class="item">상자입니다.</div>
+     <div title="" class="item">상자입니다.</div>
+     <div title="" class="item">상자입니다.</div>
+     <div title="" class="item">상자입니다.</div>
+     <div title="" class="item">상자입니다.</div>
+
+     div#box$*5
+     <div id="box1"></div>
+     <div id="box2"></div>
+     <div id="box3"></div>
+     <div id="box4"></div>
+     <div id="box5"></div>
+
+     div{상자$}*20
+     <div>상자1</div>
+     <div>상자2</div>
+     <div>상자3</div>
+     <div>상자4</div>
+     <div>상자5</div>
+     <div>상자6</div>
+     <div>상자7</div>
+     <div>상자8</div>
+     <div>상자9</div>
+     <div>상자10</div>
+     <div>상자11</div>
+     <div>상자12</div>
+     <div>상자13</div>
+     <div>상자14</div>
+     <div>상자15</div>
+     <div>상자16</div>
+     <div>상자17</div>
+     <div>상자18</div>
+     <div>상자19</div>
+     <div>상자20</div>
+
+     div{상자$$}*20
+     <div>상자01</div>
+     <div>상자02</div>
+     <div>상자03</div>
+     <div>상자04</div>
+     <div>상자05</div>
+     <div>상자06</div>
+     <div>상자07</div>
+     <div>상자08</div>
+     <div>상자09</div>
+     <div>상자10</div>
+     <div>상자11</div>
+     <div>상자12</div>
+     <div>상자13</div>
+     <div>상자14</div>
+     <div>상자15</div>
+     <div>상자16</div>
+     <div>상자17</div>
+     <div>상자18</div>
+     <div>상자19</div>
+     <div>상자20</div>
+
+
+
+     <h1>형제 선택자</h1>
+
+     a+b: 인접형제
+     a~b: 형제
+
+     <!-- 안됨 -->
+     h1~p {}
+
+     h1+p
+     <h1></h1>
+     <p></p>
+
+    
+     h1+p*5
+     <h1></h1>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     <p></p>
+     
+     (h1+p)*5
+     <h1></h1>
+     <p></p>
+     <h1></h1>
+     <p></p>
+     <h1></h1>
+     <p></p>
+     <h1></h1>
+     <p></p>
+     <h1></h1>
+     <p></p>
+
+     h1#title{제목입니다.}+p.description{내용입니다}*3
+     <h1 id="title">제목입니다.</h1>
+     <p class="description">내용입니다</p>
+     <p class="description">내용입니다</p>
+     <p class="description">내용입니다</p>
+
+     <h1>자식 선택자</h1>
+     a > b : 자식
+     a b: 자손
+
+     div>span
+     <div><span></span></div>
+
+     ul>li
+     <ul>
+        <li></li>
+     </ul>
+
+     ul#list1>li.item{항목$}*5
+     <ul id="list1">
+        <li class="item">항목1</li>
+        <li class="item">항목2</li>
+        <li class="item">항목3</li>
+        <li class="item">항목4</li>
+        <li class="item">항목5</li>
+     </ul>
+
+     table>tr>td
+     <table>
+        <tr>
+            <td></td>
+        </tr>
+     </table>
+
+     table>tr*20>td*5
+     <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+     </table>
+
+
+    <h1>Lorem Ipsum</h1>
+
+    <h1>제목</h1>
+    
+    div{내용입니다.}
+    <div>내용입니다.</div>
+
+    div>lorem
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, quod! Sint dolore enim nostrum. Et ab nulla consequatur corporis quas eveniet? Commodi aperiam minima ipsa ea, odio doloribus porro ad!</div>
+
+    div>lorem1
+    <div>Lorem.</div>
+
+     (h1>lorem5)+(p>lorem50)*3
+     <h1>Lorem ipsum dolor sit amet.</h1>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed pariatur eveniet ut ipsum odit, magni voluptas exercitationem amet non architecto modi quae harum. Atque saepe reprehenderit, omnis quam sint ipsum? Aliquam porro dignissimos ex. Commodi quo voluptatibus illo excepturi consequuntur veritatis reprehenderit eius! Dolorem fugit tempora minima neque, ipsum repudiandae!</p>
+     <p>Voluptate repellat nisi, expedita ipsum earum, incidunt pariatur soluta reprehenderit, quis dolores distinctio nam in ipsa dolore voluptas nemo aliquam assumenda eligendi sequi molestias repellendus maxime? Aperiam, molestias. Enim delectus repudiandae recusandae ab corrupti ea, ipsam dolores consectetur, ipsum quis nisi officia repellat asperiores praesentium ratione sed in! Eaque, unde.</p>
+     <p>Suscipit, fugiat quod. Tempore nam nobis dicta deserunt non aliquid deleniti sint architecto unde pariatur quis excepturi consectetur placeat nostrum, cum maxime eaque labore voluptatibus! Magni ullam sint quasi, qui accusamus harum, nisi iste voluptate atque explicabo perspiciatis laboriosam quis est! Officia dicta delectus laudantium. Quia fuga facilis doloribus iusto.</p>
+
 </body>
 </html>
