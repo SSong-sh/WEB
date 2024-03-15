@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+
+            HTML의 속성은 태그에 종속적이다
+            - <body bgcolor=""> (o)
+            - <div bgcolor=""> (x)
+            
+            CSS의 속성은 태그와 무관하다.
+            - 1개의 속성 > 모든 태그에 적용이 가능하다.
+
+            1. background-color
+                - 배경색
+
+            2. background-image
+                - 배경이미지
+
+            3. background-repeat
+                - 배경이미지 반복 제어
+                - repeat, repeat-x, repeat-y, no-repeat
+
+            4. backgroud-position
+                - 배경이미지 위치
+                - 수평: left, center, right or 수치
+                - 수직 : top, center, bottom or 수치
+
+            5. background-attachment
+                - 배경이미지 고정
+                - scroll, fixed
+            
+            CSS 색상 표현법
+            1. Color Name : red, yellow, blue
+            2. RGB Color(HEX): #000000 ~ #FFFFFF
+            3. RGB Color(DEX): rgb(0,0,0) ~ rbg(255,255,255)
+            4. RGB Color(DEX): rbg(255,255,255,1), Alpha Channel (불투명도: 0 ~ 1)
+        */
+
+
+        body {
+            /* background-color: #FFFFFF;
+            background-image: url(images/catty01.png); */
+            background-color: yellow;
+
+            background-image: url(images/wall01.jpg);
+        }
+
+        #box1 {
+            /* background-color: rgba(255, 0, 0, 0.5); */
+
+            background-image: url(images/catty02.png);
+            background-repeat: no-repeat;
+            /* background-position: center center; */
+            background-position: 100px 100px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, porro id? Excepturi maxime cupiditate dolore nemo temporibus, asperiores ut optio accusantium necessitatibus sequi ratione placeat beatae voluptas error veniam! Culpa dicta minus soluta fugit, ullam maxime quia iure, ut voluptatem earum atque ipsum! Blanditiis, ipsa deleniti quibusdam, suscipit ipsam voluptates est id rerum doloremque atque culpa reprehenderit iusto natus harum minus recusandae mollitia tenetur dolores officia hic, laudantium consequatur beatae! Repellat rem ipsam tempora voluptatum. Sed veritatis aperiam dolores, tempore hic, ipsam architecto qui placeat nesciunt, quod iure rerum quidem perferendis? Aliquid saepe ipsam adipisci. Laboriosam, iusto ipsam necessitatibus eos sit assumenda modi aperiam quasi a explicabo, sapiente quisquam rem voluptatum, facere aspernatur magni eum architecto ipsum! Fugiat cumque cum aperiam molestiae illo fugit sequi optio praesentium laudantium nobis atque dolores, numquam quo nemo explicabo alias dolorum modi, vel earum quas? Nisi fugiat quia incidunt molestias minus nam quis quo optio dolore dicta, ab ducimus. Voluptates molestias velit harum vitae tempora, libero sed odio beatae dicta minima sequi corporis eveniet sapiente veniam, a natus! Distinctio quod quis rem ducimus ad maxime totam veritatis quia laboriosam! Omnis voluptatibus veritatis quis corrupti nam ratione eum! Repudiandae fugit libero aspernatur temporibus rerum aliquam ab nisi placeat ut rem aut omnis voluptates dolore dolores tempora porro ipsam qui, saepe vitae consequatur? Perspiciatis, quo architecto? Dicta, quidem. Fugiat quia fugit magni sit perferendis mollitia eligendi autem doloribus. Accusantium assumenda fugit officia facere, consequuntur est corrupti vero ratione, laudantium architecto fuga sunt, odio dolores veniam vitae repudiandae quibusdam impedit nihil earum at sint reprehenderit modi voluptatibus! Quia magnam similique blanditiis dolorem dolore tempore culpa temporibus sunt, necessitatibus veniam eveniet omnis laboriosam quos amet rem ullam animi iste nobis reprehenderit quibusdam maxime. Repudiandae animi, quaerat sed placeat odit porro tempora incidunt eum? Dicta architecto tenetur quam odio!</div><div id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, porro id? Excepturi maxime cupiditate dolore nemo temporibus, asperiores ut optio accusantium necessitatibus sequi ratione placeat beatae voluptas error veniam! Culpa dicta minus soluta fugit, ullam maxime quia iure, ut voluptatem earum atque ipsum! Blanditiis, ipsa deleniti quibusdam, suscipit ipsam voluptates est id rerum doloremque atque culpa reprehenderit iusto natus harum minus recusandae mollitia tenetur dolores officia hic, laudantium consequatur beatae! Repellat rem ipsam tempora voluptatum. Sed veritatis aperiam dolores, tempore hic, ipsam architecto qui placeat nesciunt, quod iure rerum quidem perferendis? Aliquid saepe ipsam adipisci. Laboriosam, iusto ipsam necessitatibus eos sit assumenda modi aperiam quasi a explicabo, sapiente quisquam rem voluptatum, facere aspernatur magni eum architecto ipsum! Fugiat cumque cum aperiam molestiae illo fugit sequi optio praesentium laudantium nobis atque dolores, numquam quo nemo explicabo alias dolorum modi, vel earum quas? Nisi fugiat quia incidunt molestias minus nam quis quo optio dolore dicta, ab ducimus. Voluptates molestias velit harum vitae tempora, libero sed odio beatae dicta minima sequi corporis eveniet sapiente veniam, a natus! Distinctio quod quis rem ducimus ad maxime totam veritatis quia laboriosam! Omnis voluptatibus veritatis quis corrupti nam ratione eum! Repudiandae fugit libero aspernatur temporibus rerum aliquam ab nisi placeat ut rem aut omnis voluptates dolore dolores tempora porro ipsam qui, saepe vitae consequatur? Perspiciatis, quo architecto? Dicta, quidem. Fugiat quia fugit magni sit perferendis mollitia eligendi autem doloribus. Accusantium assumenda fugit officia facere, consequuntur est corrupti vero ratione, laudantium architecto fuga sunt, odio dolores veniam vitae repudiandae quibusdam impedit nihil earum at sint reprehenderit modi voluptatibus! Quia magnam similique blanditiis dolorem dolore tempore culpa temporibus sunt, necessitatibus veniam eveniet omnis laboriosam quos amet rem ullam animi iste nobis reprehenderit quibusdam maxime. Repudiandae animi, quaerat sed placeat odit porro tempora incidunt eum? Dicta architecto tenetur quam odio!</div><div id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, porro id? Excepturi maxime cupiditate dolore nemo temporibus, asperiores ut optio accusantium necessitatibus sequi ratione placeat beatae voluptas error veniam! Culpa dicta minus soluta fugit, ullam maxime quia iure, ut voluptatem earum atque ipsum! Blanditiis, ipsa deleniti quibusdam, suscipit ipsam voluptates est id rerum doloremque atque culpa reprehenderit iusto natus harum minus recusandae mollitia tenetur dolores officia hic, laudantium consequatur beatae! Repellat rem ipsam tempora voluptatum. Sed veritatis aperiam dolores, tempore hic, ipsam architecto qui placeat nesciunt, quod iure rerum quidem perferendis? Aliquid saepe ipsam adipisci. Laboriosam, iusto ipsam necessitatibus eos sit assumenda modi aperiam quasi a explicabo, sapiente quisquam rem voluptatum, facere aspernatur magni eum architecto ipsum! Fugiat cumque cum aperiam molestiae illo fugit sequi optio praesentium laudantium nobis atque dolores, numquam quo nemo explicabo alias dolorum modi, vel earum quas? Nisi fugiat quia incidunt molestias minus nam quis quo optio dolore dicta, ab ducimus. Voluptates molestias velit harum vitae tempora, libero sed odio beatae dicta minima sequi corporis eveniet sapiente veniam, a natus! Distinctio quod quis rem ducimus ad maxime totam veritatis quia laboriosam! Omnis voluptatibus veritatis quis corrupti nam ratione eum! Repudiandae fugit libero aspernatur temporibus rerum aliquam ab nisi placeat ut rem aut omnis voluptates dolore dolores tempora porro ipsam qui, saepe vitae consequatur? Perspiciatis, quo architecto? Dicta, quidem. Fugiat quia fugit magni sit perferendis mollitia eligendi autem doloribus. Accusantium assumenda fugit officia facere, consequuntur est corrupti vero ratione, laudantium architecto fuga sunt, odio dolores veniam vitae repudiandae quibusdam impedit nihil earum at sint reprehenderit modi voluptatibus! Quia magnam similique blanditiis dolorem dolore tempore culpa temporibus sunt, necessitatibus veniam eveniet omnis laboriosam quos amet rem ullam animi iste nobis reprehenderit quibusdam maxime. Repudiandae animi, quaerat sed placeat odit porro tempora incidunt eum? Dicta architecto tenetur quam odio!</div>
+    
+</body>
+</html>
