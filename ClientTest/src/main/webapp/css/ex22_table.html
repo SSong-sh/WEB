@@ -11,13 +11,27 @@
              color: #444;
         }
 
-        h1 {
-            border-bottom: 1px dotted gray;
-            width: 1000PX;
+
+        #title {
+            color: #444;
+            font-variant: small-caps;
+            letter-spacing: -1px;
+            /* text-decoration: underline dashed 1px; */
+            border-bottom: 1px dashed #444;
+            padding-bottom: 0;
+            width: 1000px;
+            
         }
 
-        #t1 {
+        #title .first-letter {
             color: cornflowerblue;
+        }
+
+        #title .sub-title {
+            float: right;
+            font-size: 20px;
+            margin-top: 30px;
+
         }
 
         #t2 {
@@ -41,16 +55,37 @@
             font-size: 50px;
         }
 
-        .tbl {
+        #tbl1, #tbl2, #tbl3 {
             border: 1px solid #DDDDDD;
             border-collapse: collapse;
             width: 1000PX;
             text-align: center;
         }
 
+        #tbl4 {
+            width: 1000PX;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        #tbl4 td {
+            border: none;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        #tbl4 th {
+            border: none;
+        }
+
+        #tbl5 {
+            width: 1000PX;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
         .tbl th, .tbl td {
             border: 1px solid #CCCCCC;
-            padding: 3px;  
+            padding: 5px;  
         }
 
         .tbl th {
@@ -67,12 +102,27 @@
         .tbl #col4 { width: 60px; }
         .tbl #col5 { width: auto;}
 
+        #tbl2 tr:nth-child(even) {
+            background-color: #EEEEEE;
+        }
+        
+        #tbl3 tr:hover {
+            background-color: #EEEEEE;
+        }
+ 
+
+
     </style>
 </head>
 <body>
 
-    <h1><span id="t1">M</span>EMBER LIST</h1>
-    
+    <h1 id="title">
+        <span id="t2" class="first-letter">M</span>ember List
+        <span class="sub-title"> Table Design</span>
+    </h1>
+  
+
+
     <table id="tbl1" class="tbl">
         <tr>
             <th id="col1">No</th>
@@ -155,7 +205,7 @@
 
 
 
-    <h1><span id="t2">M</span>EMBER LIST</h1>
+    <h1 id="title"><span class="first-letter">M</span>ember List <span class="sub-title"> Table Design</span></h1>
     <table id="tbl2" class="tbl">
         <tr>
             <th id="col1">No</th>
@@ -238,7 +288,7 @@
 
 
 
-    <h1><span id="t3">M</span>EMBER LIST</h1>
+    <h1 id="title"><span class="first-letter">M</span>ember List <span class="sub-title"> Table Design</span></h1>
     <table id="tbl3" class="tbl">
         <tr>
             <th id="col1">No</th>
@@ -322,7 +372,7 @@
 
 
 
-    <h1><span id="t4">M</span>EMBER LIST</h1>
+    <h1 id="title"><span id="t2" class="first-letter">M</span>ember List <span class="sub-title"> Table Design</span></h1>
     <table id="tbl4" class="tbl">
         <tr>
             <th id="col1">No</th>
@@ -407,7 +457,7 @@
 
 
 
-    <h1><span id="t5">M</span>EMBER LIST</h1>
+    <h1 id="title"><span class="first-letter">M</span>ember List <span class="sub-title"> Table Design</span></h1>
     <table id="tbl5" class="tbl">
         <tr>
             <th id="col1">No</th>
