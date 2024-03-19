@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list input {
+            display: block;
+            margin-bottom: 5px;
+            border: 1px solid #444;
+            outline: none;
+            padding: 4px;
+            background-color: #FFFFFF;
+            color: #444;
+        }
+
+
+        /* #list input:required {
+            background-color: gold;
+        }
+
+        #list input:optional {
+            background-color: gray;
+        } */
+/* 
+        #list input:disabled {background-color: greenyellow;}
+        #list input:enabled {background-color: blue;} */
+
+        /* #list input:read-only {background-color: gold;}
+        #list input:read-write {background-color: #ccc;} */
+
+        input[type=checkbox]{
+            opacity: .3;
+        }
+
+        input[type=checkbox]:checked {
+            opacity: 1;
+        }
+
+
+
+        #cb1:checked + div {
+            display: none;
+        }
+
+        #item {
+            border: 1px solid black;
+            width: 200px;
+        }
+
+        #item #cb2 {
+            display: none;
+        }
+
+        #item label {
+            font-size: 1.5rem;
+            font-family: Arial;
+            font-variant: small-caps;
+            display: block;
+            padding: 10px;
+            background-color: cornflowerblue;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+
+        #item div{
+            display: none;
+            border-top: 1px solid black;
+            padding: 15px;
+        }
+
+        #item #cb2:checked + label + div {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div id="item">
+        <input type="checkbox" id="cb2">
+        <label for="cb2">JavaScript</label>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi consequatur, ducimus ratione tenetur labore fuga vero. Vel, eos. Ipsam, illo! Sint atque dolores deleniti repellendus cum doloremque nihil itaque, excepturi soluta? Eaque inventore aliquam et eum ad quod eos. Facere fugit repellendus, quos dolorem laboriosam repellat vero perspiciatis beatae. Possimus.</div>
+    </div>
+
+
+
+    <hr>
+
+
+    <label for="cb1">설명감추기</label>
+    <input type="checkbox" id="cb1">
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente sunt neque cum libero eum a ullam minima eligendi, ratione, excepturi nemo et consequuntur quo quaerat nesciunt corporis facere sequi similique?</div>
+
+
+    <hr>
+    
+    <div>
+        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="">
+    </div>
+
+    <div id="list">
+        <input type="text" value="1" required>
+        <input type="text" value="2" readonly>
+        <input type="text" value="3" readonly>
+        <input type="text" value="4">
+        <input type="text" value="5" required>
+        <input type="text" value="6" disabled>
+        <input type="text" value="7">
+        <input type="text" value="8" disabled>
+        <input type="text" value="9">
+        <input type="text" value="10" required>
+    </div>
+    
+</body>
+</html>

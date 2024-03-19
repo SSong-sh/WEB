@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/4b3c3b390b.js" crossorigin="anonymous"></script>
+    <style>
+        /* 
+
+            CSS 선택자
+
+            1. :first-child
+                - 가상클래스
+            2. ::before 
+                - 가상 요소
+
+
+
+            전후 선택자
+            - 선택한 요소의 앞이나 뒤에 (자식으로) 내용을 추가하는 역할 
+            1. ::before
+                - :before
+            2. ::after
+                - :after
+        
+        
+        
+        */
+
+        p > span { color: coral;}
+
+        /* p > span::before {
+            content: '문자열';
+            color: blue;
+            font-size: 2rem;
+        }
+
+        p > span::after {
+            content: '홍길동';
+            color: red;
+            font-style: italic;
+        } */
+
+        p > span::before {
+            font-family: "FontAwesome";
+            font-weight: 400;
+            content: "\e07b";
+            margin-right: 10px;
+        }
+
+        i {
+            font-size: 10rem;
+            color: tomato;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <i class="fa-solid fa-dice"></i>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur <span>adipisicing</span> elit. Dicta dolor amet illo <span>veritatis</span> voluptatem molestiae iusto nemo magni! Itaque alias ab saepe <span>necessitatibus</span> et, quo reiciendis. Quos, ad ipsam?</p>
+
+</body>
+</html>
