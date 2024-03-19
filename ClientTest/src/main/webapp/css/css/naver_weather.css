@@ -1,0 +1,194 @@
+#weather {
+    width: 750px;
+    margin: 0 auto;
+    font-family: 
+    "SF UI Display",       /* Apple Systems */
+    "-apple-system", 
+    "BlinkMacSystemFont", 
+    "HelveticaNeue",       /* Helvetica Neue */
+    "Helvetica", 
+    "Roboto",               /* Google Fonts */
+    "NotosansKR",           /* Korean */
+    "Arial", 
+    "AppleSDGothicNeo-Regular", 
+    "Malgun Gothic",        /* 맑은고딕 (Korean) */
+    "맑은고딕", 
+    "Dotum",                /* 돋움 (Korean) */
+    "돋움", 
+    sans-serif;             /* Fallback generic sans-serif font */
+
+}
+
+.weather-list {
+    list-style: none;
+    text-align: center;
+}
+
+.weather-list > li {
+    width: 100px;
+    display: inline-block;
+    padding-right: 10px;
+    border-right: 1.5px solid #dee0e0;
+}
+
+
+.weather-day {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+.weather-date {
+    font-weight: lighter;
+    font-size: 13px;
+    color: #BCBCBC;
+}
+
+
+
+.weather-img1{
+    background-image: url(/css/images/weather.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: -215px -35px;
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left:12px;
+    margin-top: 5px;
+}
+
+
+.weather-img2{
+    background-image: url(/css/images/weather.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left:5px;
+    margin-top: 5px;
+
+}
+
+.fri2 {
+    background-image: url(/css/images/weather.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: -215px -177px;
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left:5px;
+    margin-top: 5px;
+}
+
+.sat1 {
+    background-image: url(/css/images/weather.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: -215px -177px;
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left:12px;
+    margin-top: 5px;
+}
+
+.sat2 {
+    background-image: url(/css/images/weather.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: -215px -35px;
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left:5px;
+    margin-top: 5px;
+}
+
+
+.sun2 {
+    background-image: url(/css/images/weather.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: -215px -35px;
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left:5px;
+    margin-top: 5px;    
+}
+
+
+.mon2 {
+    background-image: url(/css/images/weather.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: -215px -105px;
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left:5px;
+    margin-top: 5px;      
+}
+
+.tue1 {
+    background-image: url(/css/images/weather.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: -215px -105px;
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left:12px;
+    margin-top: 5px;
+}
+
+
+
+.weather-temp-score {
+    margin-top: 50px;
+}
+
+.weather-temp-score > span:nth-child(1) {
+    color: #3474E7;
+}
+
+.weather-temp-score > span:nth-last-child(1){
+    color:#D14443;
+    font-weight: bold;
+}
+
+.weather-temp-score > p {
+    display: inline;
+    color: #DADADA;
+}
+
+
+.weather-temp-percent {
+    font-size: 10px;
+}
+
+.weather-temp-percent > span:nth-child(1) {
+    color: #3474E7;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+.weather-temp-percent > span{
+    color: #DADADA;
+    font-weight: bold;
+}
+
+
+#not {
+    color: #3474E7;
+    font-weight: bold;
+}
+
+.clear {
+    clear: both;
+}
