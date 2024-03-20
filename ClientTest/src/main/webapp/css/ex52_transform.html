@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box {
+            border: 1px solid black;
+            width: 200px; height: 200px;
+            background-color: gold;
+            margin: 100px;
+            transition: all 3s;
+        }
+
+        body {
+            padding-bottom: 500px;
+        }
+
+        body:hover #box {
+            /* transform: rotate(45deg); */
+            transform: rotate(45deg);
+
+            /* 변화 중심축 */
+            /* transform-origin: right bottom; */
+            transform-origin: 0px 400px
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">상자</div>
+    
+</body>
+</html>
