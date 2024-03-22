@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+
+        변수의 스코프
+
+        자바
+        1. 멤버 변수 > 클래스 전역
+        2. 지역 변수 > 메소드 or 제어문 전역
+
+        자바스크립트
+        1. 전역변수 > 한 페이지
+        2. 지역변수
+    
+    */
+
+    var num1= 100; //전역 변수. script태그내에서 직접선언
+    console.log(num1);
+
+    function m1() {
+        var num2 = 200; //지역변수. m1을 영역
+        console.log(num2);
+    }
+
+    m1();
+    //console.log(m2);
+
+    if (num1 > 0) {
+        console.log('참');
+        var num3 = 300;
+        console.log(num3);
+    }
+
+
+    //자바의 지역변수 > 블럭 스코프(Block-scope)변수
+    //자바스크립트의 지역변수 > 함수 스코프(Fucntion-scope) 변수
+    console.log(num3);
+
+    function m2() {
+        if(true){
+            var num4 = 400;
+        }
+    }
+
+    var num5 = 500;
+    num6 = 600;
+
+    console.log(num6);
+
+    function m3() {
+        var num7 = 700; //지역 변수
+        num8 = 800; // 전역변수 (var을 안쓰면 다 전역변수- 블럭에 써도)
+    }
+
+    m3();
+    console.log(num7);
+    console.log(num8);
+
+
+    </script>
+</body>
+</html>
