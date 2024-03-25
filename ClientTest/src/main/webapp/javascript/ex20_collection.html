@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이미지</h1>
+    <img src="images/catty01.png">
+    <img src="images/catty02.png">
+    <img src="images/catty03.png">
+    <img src="images/catty04.png">
+    <img src="images/catty05.png">
+
+    <h1>링크</h1>
+    <a href="https://naver.com">네이버</a>
+    <a href="https://google.com">구글</a>
+    <a href="https://daum.net">다음</a>
+
+    <h1>앵커</h1>
+    <a name="a1">앵커1</a>
+    <a name="a2">앵커2</a>
+
+    <h1>폼</h1>
+    <form>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </form>
+    <form>
+        <input type="checkbox">
+        <input type="radio">
+    </form>
+
+    <script>
+        /* 
+        
+            내장 배열(=컬렉션)
+            - 문서 내용(작성된 HTML)을 기반으로 자동 생성되는 배열을 제공
+            - 태그 접근할 때 사용 + 조작
+
+            1. window.document.images
+            2. window.document.links
+            3. window.document.anchors
+            4. window.document.forms
+            5. window.document.forms[index].elements
+            6. window.document.all > 비표준(ms)
+
+        */
+
+        console.log(document.images.length);
+        console.log(document.images[0].src);
+
+        for ( var i=0; i<5; i++) {
+            console.log(document.images[i].src);
+        }
+        console.clear();
+
+        console.log(document.links);
+        console.log(document.anchors);
+        console.log(document.forms);
+        console.log(document.forms[0].elements); //form 요소의 자식들만 a 태그는 속하지 않음
+        console.log(document.forms[1].elements); //form 요소의 자식들만 a 태그는 속하지 않음
+
+        console.log(document.all);
+    </script>
+</body>
+</html>

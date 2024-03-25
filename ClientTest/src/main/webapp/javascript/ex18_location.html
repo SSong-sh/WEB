@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>location 객체</h1>
+    <form name="form1">
+        <input type="button" value="버튼" name="btn1">
+    </form>
+
+    <script>
+        
+        btn1 = document.form1.btn1;
+
+        btn1.onclick = m1;
+
+
+        function m1() {
+            //location 객체
+            //- window > location
+            //- 현재 창의 페이지 주소 참조 객체 > URL 조작
+
+            // console.log(location.href); 읽기
+            //자바스크립트로 페이지 이동 ***********
+            location.href ='ex16_window.html'; //쓰기
+
+            //location.reload(); //새로고침(F5);
+
+            //location.assign('ex16_window.html');
+
+
+        }
+
+        //전역 이벤트
+        //- 어떤 상황에서 행동하던지 상관없이 > 항상 발생하는 이벤트
+        window.onkeydown = m2;
+
+        //바로가기 키
+        function m2() {
+            // alert(event.keyCode);
+            if(even.keyCode == 78) {
+                // location.href = 'https://naver.com';
+            } else if(event.keyCode == 71) {
+                location.href = 'https://google.com';
+            }
+        }
+    </script>
+</body>
+</html>
