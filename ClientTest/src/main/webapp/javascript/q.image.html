@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>고양이</h1>
+    <form name="form1">
+        <img src="images/catty01.png" name="cat1">
+        <img src="images/catty02.png" name="cat2">
+        <img src="images/catty03.png" name="cat3">
+        <img src="images/catty04.png" name="cat4">
+        <img src="images/catty05.png" name="cat5">
+        <!-- <img src="images/catty01.png" name="cat">
+        <img src="images/catty02.png" name="cat">
+        <img src="images/catty03.png" name="cat">
+        <img src="images/catty04.png" name="cat">
+        <img src="images/catty05.png" name="cat"> -->
+    </form>
+
+    <script>
+
+
+        document.images['cat1'].onmouseover = m1;
+        document.images['cat2'].onmouseover = m2;
+        document.images['cat3'].onmouseover = m3;
+        document.images['cat4'].onmouseover = m4;
+        document.images['cat5'].onmouseover = m5;
+
+        document.images['cat1'].onclick = m7;
+        document.images['cat2'].onclick = m8;
+        document.images['cat3'].onclick = m9;
+        document.images['cat4'].onclick = m10;
+        document.images['cat5'].onclick = m11;
+
+        function m1() {
+            document.images['cat1'].width +=5 ;
+        }
+        function m2() {
+            document.images['cat2'].width +=5 ;
+        }
+        function m3() {
+            document.images['cat3'].width +=5 ;
+        }
+        function m4() {
+            document.images['cat4'].width +=5 ;
+        }
+        function m5() {
+            document.images['cat5'].width +=5 ;
+        }
+
+        window.onkeydown = m6;
+        function m6() {
+            //상단 숫자키 : 0(48) ~ 9(57)
+            
+            // alert(event.keyCode);
+            if(event.keyCode == 49) {
+                document.images['cat1'].width +=5;
+            } else if(event.keyCode == 50) {
+                document.images['cat2'].width +=5;
+            } else if(event.keyCode == 51) {
+                document.images['cat3'].width +=5;
+            } else if(event.keyCode == 52) {
+                document.images['cat4'].width +=5;
+            } else if(event.keyCode == 53) {
+                document.images['cat5'].width +=5;
+            } else if(event.keyCode == 27) {
+                document.images['cat1'].width = 126;
+                document.images['cat2'].width = 126;
+                document.images['cat3'].width = 126;
+                document.images['cat4'].width = 126;
+                document.images['cat5'].width = 126;
+            }
+        }
+
+        function m7() {
+            document.images['cat1'].width = 126;
+        }
+        function m8() {
+            document.images['cat2'].width = 126;
+        }
+        function m9() {
+            document.images['cat3'].width = 126;
+        }
+        function m10() {
+            document.images['cat4'].width = 126;
+        }
+        function m11() {
+            document.images['cat5'].width = 126;
+        }
+
+        
+
+    </script>
+</body>
+</html>
