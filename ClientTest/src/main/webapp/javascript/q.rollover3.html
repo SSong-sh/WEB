@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl {
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+        img {
+            margin: 5px;
+        }
+
+        input {
+            border: 0px solid #DEDEDE;
+			font-size: 30px;
+			font-weight: bold;
+			width: 600px;
+			color: #333;
+			margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table id="tbl">
+        <tr>
+            <td><img src="images/img01.jpg" name="img1"></td>
+            <td><img src="images/img02.jpg" name="img2"></td>
+            <td><img src="images/img03.jpg" name="img3"></td>
+        </tr>
+    </table>
+    <div><input type="text" name="txt"></div>
+
+    <script>
+        document.images['img1'].onmouseover = m2;
+        document.images['img1'].onmouseout = m3;
+
+        //롤오버 이미지 효과
+        function m2() {
+            document.images['img1'].src = 'images/img04.jpg';
+            document.all.txt.value ="스키 타는 사람이 당근으로 변했습니다."
+        }
+
+        function m3() {
+            document.images['img1'].src = 'images/img01.jpg';
+            document.all.txt.value =""
+        }
+
+
+        document.images['img2'].onmouseover = m4;
+        document.images['img2'].onmouseout = m4;
+
+        function m4() {
+            if(event.type =='mouseover') {
+                event.target.src = 'images/img05.jpg';
+                document.all.txt.value ="해바라기가 피망으로 변했습니다."
+            }else if (event.type == 'mouseout'){
+                event.target.src = 'images/img02.jpg';
+                document.all.txt.value =""
+            }
+        }
+    </script>
+</body>
+</html>
