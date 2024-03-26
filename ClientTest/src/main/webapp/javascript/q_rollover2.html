@@ -33,11 +33,11 @@
 
     <form name="form1">
         <div id="select" name="txt">
-            <input type="button" value="강아지1" name="dog1">
-            <input type="button" value="강아지2" name="dog2">
-            <input type="button" value="강아지3" name="dog3">
-            <input type="button" value="강아지4" name="dog4">
-            <input type="button" value="강아지5" name="dog5">
+            <input type="button" value="강아지1" name="dog">
+            <input type="button" value="강아지2" name="dog">
+            <input type="button" value="강아지3" name="dog">
+            <input type="button" value="강아지4" name="dog">
+            <input type="button" value="강아지5" name="dog">
         </div>
         <div id="img" name="img">
             <img src="images/dog01.jpg" name="img">
@@ -45,18 +45,27 @@
     </form>
 
     <script>
-    // console.log(document.all.dog.length);
+/*     console.log(document.all.dog.length);
+    console.log(document.all.dog[1].value); */
 
-    // for(var i=0; i<document.all.dog.length; i++) {
-    //         document.all.dog[i].onmouseover = m1;
-    //         document.all.dog[i].onclick = m2;
-    //     }
 
-    // function m1() {
-    //     for(var i=0; i<document.all.dog.length; i++) {
-    //         document.all.dog[i].src = 'images/dog02.jpg';
-    //     }
-    // }
+     for(var i=0; i<document.all.dog.length; i++) {
+             document.all.dog[i].onmouseover = m1;
+             document.all.dog[i].onclick = m2;
+    }
+
+    
+    
+    function m1() {
+        var index = Array.from(document.all.dog).indexOf(this) + 1;
+        document.images["img"].src = 'images/dog0' + index + '.jpg';
+    }
+
+    function m2() {
+        var index = Array.from(document.all.dog).indexOf(this) + 1;
+        window.open('images/dog0' + index + '_big.jpg', "big" ,"width=1400, height=1050");
+    }
+
 
 
     </script>
