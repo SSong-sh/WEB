@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>주문하기</h1>
+    <fieldset>
+        <legend>주문하시는 분</legend>
+        이름 : <input type="text" id="name"><br>
+        주소 : <input type="text" id="address">
+    </fieldset>
+
+    <input type="checkbox" id="check">주문하시는 분과 정보가 동일합니다.
+
+    <fieldset>
+        <legend>받으시는 분</legend>
+        이름 : <input type="text" id="name2"><br>
+        주소 : <input type="text" id="address2">
+    </fieldset>
+
+    <script>
+        check = document.getElementById('check');
+        name1 = document.getElementById('name');
+        name2 = document.getElementById('name2');
+        address1 = document.getElementById('address');
+        address2 = document.getElementById('address2')
+        check.onchange = m1;
+
+        function m1() {
+            if(event.target.checked){
+                name2.value = name1.value;
+                address2.value = address1.value;
+            } else{
+                name2.value = '';
+                address2.value = '';
+            }          
+        }
+    </script>
+</body>
+</html>

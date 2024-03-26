@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+		<input type="button" value="서울시 강남구 역삼동" onclick=m1(); id="address1"/><br />
+		<input type="button" value="서울시 강남구 대치동" onclick=m2(); id="address2"/><br />
+		<input type="button" value="서울시 강남구 도곡동" onclick=m3(); id="address3" /><br />
+	</form>
+
+    <script>
+        function m1() {
+            opener.document.all.ad.value = document.all.address1.value;
+            opener.document.all.num.value = '06232';
+            opener.document.all.info.focus();
+            window.close();
+        }
+        function m2() {
+            opener.document.all.ad.value = document.all.address2.value;
+            opener.document.all.info.focus();
+            opener.document.all.num.value = '06291';
+            window.close();
+        }
+        function m3() {
+            opener.document.all.ad.value = document.all.address3.value;
+            opener.document.all.info.focus();
+            opener.document.all.num.value = '06267';
+            window.close();
+        }
+    </script>
+</body>
+</html>
