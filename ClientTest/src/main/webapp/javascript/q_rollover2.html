@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            border: 1px solid gray;
+            width: 600px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+        input[type=button] {
+            width: 150px;
+            height: 40px;
+            display: block;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            border-right: 1px solid gray;          
+        }
+
+        input[type=button]:nth-child(1) {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <form name="form1">
+        <div id="select" name="txt">
+            <input type="button" value="강아지1" name="dog1">
+            <input type="button" value="강아지2" name="dog2">
+            <input type="button" value="강아지3" name="dog3">
+            <input type="button" value="강아지4" name="dog4">
+            <input type="button" value="강아지5" name="dog5">
+        </div>
+        <div id="img" name="img">
+            <img src="images/dog01.jpg" name="img">
+        </div>
+    </form>
+
+    <script>
+    // console.log(document.all.dog.length);
+
+    // for(var i=0; i<document.all.dog.length; i++) {
+    //         document.all.dog[i].onmouseover = m1;
+    //         document.all.dog[i].onclick = m2;
+    //     }
+
+    // function m1() {
+    //     for(var i=0; i<document.all.dog.length; i++) {
+    //         document.all.dog[i].src = 'images/dog02.jpg';
+    //     }
+    // }
+
+
+    </script>
+    
+</body>
+</html>
