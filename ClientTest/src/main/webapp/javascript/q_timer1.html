@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #timer {
+            width: 500;
+            height: 500;
+            font-weight: bold;
+            border: 0px transparent;
+        }
+    </style>
+</head>
+<body>
+
+        <div id="txt">10</div>
+
+    <script>
+
+        timer = 10;
+
+
+        function f3() {
+            txt.value = n;
+            n--;  
+        }
+
+        (function () {
+            timer = setInterval(f3,100);
+         })(); //즉시호출
+    </script>
+</body>
+</html>

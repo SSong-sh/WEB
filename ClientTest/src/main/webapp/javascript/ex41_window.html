@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+
+    <script>
+
+
+        /* 
+
+            window 객체
+            - window.open()
+            - window.close()
+        
+        
+        */
+
+        var a = 10; //전역변수
+        window.b = 20; //window 프로퍼티
+
+        function f1() { //전역변수
+            alert('f1')
+        }
+
+        //*** JavaScript의 모든 전역변수는 자동으로 window 객체의 프로퍼티가 된다.
+
+        //*** JavaScript의 모든 전역함수는 자동으로 window 객체의 메소드가 된다.
+
+        //window 객체의 프로퍼티
+        // alert(windoq.a);
+
+        //window 객체의 메소드
+        //window.f1();
+
+
+        function f2() {//전역함수
+
+            function f3() {// 지역함수
+
+            }
+
+            f3(); 
+
+        }
+
+        // f3(); 에러
+
+        //let과 const는 window 프로퍼티(x)
+        let c = 30;
+        const d = 40;
+
+        // alert(window.c);
+        // alert(window.d);
+
+        const hong = {
+            name: '홍길동',
+            age: 20,
+            address: '서울시'
+        };
+
+        console.log(hong);
+
+        //향상된 for문 > 프로퍼티 탐색 
+        for (let p in hong) {
+            console.log(p);
+        }
+
+        console.clear();
+
+        for (let p in window) {
+            console.log(p);
+        }
+
+        console.clear();
+
+        //JavaScript 
+        //- 배열으 ㅣ방번호 > 인덱스(x) > 프로퍼티(o)
+        const list = [100, 200, 300, 400, 500];
+
+        console.log(list.length);
+
+        console.log(list[0]);
+
+
+        for (let p in list) {
+            console.log(p);
+        }
+
+        //7번의 프로퍼티가 생긴것
+        //hong['name'], list[7]
+        console.log(list[7]);
+
+        const txt = document.getElementsByClassName('txt');
+
+        console.log(txt.length);
+
+        console.log(list); //(5) [100, 200, 300, 400, 500]
+
+        //유사 배열(=컬렉션 )
+        console.log(txt); //HTMLCollection(3) [input.txt, input.txt, input.txt]
+
+    </script>
+
+
+</body>
+</html>

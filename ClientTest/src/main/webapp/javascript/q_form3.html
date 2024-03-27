@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 700px;
+        }
+
+        tr, td{
+            border: 1px solid black;
+            height: 50px;
+        }
+
+        td{
+            padding: 0px 10px;
+        }
+
+        #birth, #gender {
+            width: 100px;
+        }
+
+        #year, #month, #day {
+            width: 50px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+
+    <table id="tbl">
+        <tr>
+            <th>주민번호</th>
+            <td><input type="text" id="birth">-<input type="text" id="gender"></td>
+        </tr>
+        <tr>
+            <th>생년월일</th>
+            <td>
+                <input type="text" id="year">년
+                <input type="text" id="month">월
+                <input type="text" id="day">일
+            </td>
+        </tr>
+        <tr>
+            <th>성별</th>
+            <td>
+                <input type="radio" id="man">남자
+                <input type="radio" id="woman">여자
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        const birth = document.getElementById('birth');
+        const year = document.getElementById('year');
+        const month = document.getElementById('month');
+        const day = document.getElementById('day');
+
+        birth.oninput = function() {
+            if( birth.value.length == 6 ) {
+            var yearN = birth.value.substr(0, 2);
+            var monthN = birth.value.substr(2, 2);
+            var dayN = birth.value.substr(4, 6);
+            year.value = '19' + yearN;
+            month.value = monthN;
+            day.value = dayN;
+            gender.focus();
+
+            }
+        };
+
+        const gender = document.getElementById('gender');
+        const man = document.getElementById('man');
+        const woman = document.getElementById('woman');
+
+        gender.oninput = function() {
+            if(gender.value === '1') {
+                man.checked = true;
+                woman.checked = false; // woman 라디오 버튼 선택 해제
+            } else if(gender.value === '2') {
+                man.checked = false; // man 라디오 버튼 선택 해제
+                woman.checked = true;
+            } else {
+                man.checked = false; // 다른 값이면 모든 라디오 버튼 선택 해제
+                woman.checked = false;
+            }
+        }
+
+
+        
+    
+
+
+    </script>
+</body>
+</html>
