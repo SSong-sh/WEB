@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 200px;
+        }
+
+        #tbl {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            width: 300px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #tbl td {
+            border: 1px solid gray;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <h1>테이블</h1>
+
+    <fieldset>
+        <legend>색상 입력</legend>
+        색상 : <input type="color" name="color" id="color"><br>
+        이름 : <input type="text" name="txt" id="txt" size="10px">
+        <input type="button" value="추가하기" id="btn">
+    </fieldset>
+
+    <table id="tbl">
+        <th>색상명</th>
+        <th>미리보기</th>
+        <tbody id="tbody">
+        <tr>
+            <td>노랑</td>
+            <td bgcolor="FFFF00">#FFFF00</td>
+        </tr>
+        <tr>
+            <td>풀색</td>
+            <td bgcolor="ACEF12">#ACEF12</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <script>
+
+        tbl = document.getElementById('tbl1');
+        btn = document.getElementById('btn');
+        txtName = document.getElementById('txt');
+        txtColor = document.getElementById('color');
+        tbody = document.getElementById('tbody');
+
+        btn.onclick = function() {
+
+            var row = "<tr>";
+            row += "<td>";
+            row += txtName.value;
+            row += "</td>";
+            row += "<td bgColor='" + txtColor.value + "'>";
+            row += txtColor.value;
+            row += "</td>";
+            row += "</tr>";
+
+            tbody.innerHTML += row;
+
+            //색 추가뒤에 입력 양식을 초기화
+            txtColor.value = "#000";
+            txtName.value = "";
+
+        }
+
+        
+    </script>
+</body>
+</html>

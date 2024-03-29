@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/7121714adf.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="../asset/question.css">
+   <title>Document</title>
+   <style>
+		#place {
+			border: 1px solid #999;
+			padding: 20px;
+			min-height: 146px;
+		}
+	</style>
+</head>
+<body>
+
+
+	<div id="place"></div>
+	
+
+	<script>
+
+		var place = document.getElementById("place");
+
+		window.onkeydown = function() {
+
+            //0 = 48 / 9 =57
+
+            
+
+			 if (event.keyCode >= 48 && event.keyCode <= 57) {
+			 	place.innerHTML += "<img src='images/" + (event.keyCode - 48) + ".png'>";
+			 } 
+            
+
+		};
+		
+	</script>
+</body>
+</html>
+

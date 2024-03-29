@@ -5,31 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #timer {
-            width: 500;
-            height: 500;
-            font-weight: bold;
-            border: 0px transparent;
+        #txt {
+            font-size: 10em;
+			font-weight: bold;
+			text-align: center;
+			width: 250px;
+			display: block;
+			margin: 100px auto;
+			border: 0px;
         }
     </style>
 </head>
 <body>
 
-        <div id="txt">10</div>
+        <input type="text" name="txt1" id="txt">
 
     <script>
 
-        timer = 10;
+      var n = 10;
 
+      var timer = setInterval(function() {
+          document.all.txt1.value = n;
+          n--;
 
-        function f3() {
-            txt.value = n;
-            n--;  
+        if(n==0) {
+            clearInterval(timer);
+            location.href = "http://google.com";
         }
 
-        (function () {
-            timer = setInterval(f3,100);
-         })(); //즉시호출
+      },1000);
     </script>
 </body>
 </html>
