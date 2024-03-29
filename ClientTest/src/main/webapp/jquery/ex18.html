@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ui/jquery-ui.css">
+    <style>
+        body {
+            margin-bottom: 500px;
+
+        }
+
+        #a1 {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!--  -->
+
+    <h1>다이얼로그</h1>
+
+    <input type="button" value="확인" id="btn5">
+    <div id="dialog1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, natus id, veritatis repellat fugit ab quae, ut maiores corrupti facere asperiores obcaecati magnam voluptatum quaerat qui! Impedit, in. Fugit, fuga.
+    </div>
+
+
+    <hr>
+
+    <h1>날짜</h1>
+    날짜 선택(HTML5) : <input type="date">
+    
+    
+    <hr>
+    날짜 선택(jQuery) : <input type="text" id="date1">
+
+    <h1>Button</h1>
+
+    <input type="button" value="글쓰기" id="btn1" class="btn">
+    <input type="button" value="돌아가기" id="btn2" class="btn">
+
+
+    <hr>
+
+    <div id="btns">
+    <input type="button" value="글쓰기" id="btn3" class="btn">
+    <input type="button" value="돌아가기" id="btn4" class="btn">
+    </div>
+
+    <h1>Accordion</h1>
+
+    <div id="a1">
+
+        <h2>HTML</h2>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repellat, id eveniet voluptas laudantium ut consequatur minus voluptatem voluptatum accusamus repellendus quidem odit facere reiciendis facilis unde hic blanditiis totam!</div>
+        
+        <h2>CSS</h2>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima quia odit, saepe enim error quo autem. Voluptatem, perspiciatis praesentium eaque facere facilis architecto voluptatum possimus asperiores laboriosam consectetur natus!</div>
+        
+        <h2>JavaScript</h2>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae deserunt repellendus at sint. Odio corrupti assumenda quas dolorem nam aliquid consequuntur vel maiores iusto, atque perferendis delectus maxime expedita ipsum.</div>
+    </div>
+
+
+    <hr>
+
+    <!-- 모바일 > 링크를 손가락으로 클릭하기엔 작음 -->
+    <a href="https://naver.com" class="btn">네이버</a>
+    
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="ui/jquery-ui.js"></script>
+    <script>
+
+
+        $('.btn').button();
+
+        $('#btns').controlgroup();
+
+        $('#a1').accordion({
+            collapsible:true
+        });
+
+        $('#date1').datepicker({
+            dateFormat: 'yy-mm-dd',
+            // minDate: -5,
+            // maxDate: 1
+            // minDate:'-1M -5D',
+            // maxDate:'-1M -5D'
+            minDate : '2024-03-03',
+            maxDate : '2024-04-10'
+        });
+
+        $('#dialog1').hide();
+
+        $('#btn5').click(()=>{
+            // $('#dialog1').show();
+
+            /* 
+
+                대화상자
+
+                1. modal
+                    - 팝업창이 포커스를 독점한다.
+                    - 팝업창의 업무가 종료되기 전까지 부모창을 조작할 수 없다.
+
+
+                2. modeless
+                    - 팝업창과 부모창의 포커스가 전환이 자유롭다.
+                    - 팝업창의 업무와 부모창의 업무를 동시에 진행 할 수 있다.
+
+            
+            */
+
+            // window.open('ex17.html','child', 'width=300, height=300')
+
+            
+            $('#dialog1').dialog({
+                title: '대화상자',
+                width: 300,
+                height: 400,
+                draggable: false,
+                resizable: false,
+                modal: true,
+                buttons: {
+
+                    // 'text1': function() {
+                    //     alert();
+                    // }
+                    '확인': function() {
+                        
+                    },
+                    '취소': function() {
+                        $('#dialog1').dialog('close');
+                    }
+                }
+            });
+
+        });
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl1 { border: 1px solid blackl; border-collapse: collapse;}
+        #tbl1 td {border: 1px solid black; width: 100px; height: 25px;}
+    </style>
+</head>
+<body>
+    <!--  -->
+    <h1>이벤트</h1>
+    <table id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+
+        //DOM
+
+        /*         
+        const list = document.querySelectorAll('#tbl1 td');
+
+        list.forEach(td => {
+            td.addEventListener('mouseover', function() {
+                event.target.style['background-color'] = 'gold';
+            });
+            td.addEventListener('mouseout', function() {
+                event.target.style['background-color'] = 'transparent';
+            });
+        }); 
+        */
+
+        //jQuery
+/* 
+        $('#tbl1 td').mouseover(() => {
+            //자바스크립트 객체
+            // event.target.style['background-color'] = 'gold';
+            $(event.target).css('background-color','gold');
+        });
+        $('#tbl1 td').mouseout(() => {
+            $(event.target).css('background-color','transparent');
+        });
+
+ */
+
+        //$('#tbl1 td') 반환하기 때문에 다시 다른 이벤트를 걸 수 있음
+        // $('#tbl1 td').mouseover(() => {
+        //     //자바스크립트 객체
+        //     // event.target.style['background-color'] = 'gold';
+        //     $(event.target).css('background-color','gold');
+        // }).mouseout(() => {
+        //     $(event.target).css('background-color','transparent');
+        // });
+
+
+
+        $('#tbl1 td').on({
+            mouseover: () => {
+                $(event.target).css('background-color','gold');
+            },
+            mouseout: () => {
+                $(event.target).css('background-color','transparent');
+            }
+        });
+
+
+    </script>
+</body>
+</html>

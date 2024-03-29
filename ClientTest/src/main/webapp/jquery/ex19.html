@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ui/jquery-ui.css">
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+            /* border: 10px solid black; */
+            overflow-y: scroll;
+        }
+
+        #search {
+            border: 1px solid #999;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px;
+        }
+
+        #price {
+            margin: 20px;
+        }
+
+        .item {
+            border: 1px solid #999;
+            width: 150px;
+            height: 220px;
+            text-align: center;
+            padding: 20px 10px;
+            margin: 14px;
+            float: left;
+        }
+
+        .item > div:last-child {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: tomato;
+        }
+
+        .item > div:last-child::after {
+            content: '원';
+        }
+
+    </style>
+</head>
+<body>
+    <!--  -->
+    <h1>상품목록</h1>
+
+    <div id="search">
+        가격: <span><span>30,000</span>원 ~ <span>70,000</span>원</span>
+        <div id="price"></div>
+    </div>
+
+    <div id="list">
+        <!-- <div class="item">
+            <img src="images/rect_icon01.png">
+            <div>상품명</div>
+            <div>50000</div>
+        </div> -->
+        <div class="item">
+            <img src="images/rect_icon01.png" alt="">
+            <div>Lorem, ipsum.</div>
+            <div>10000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon02.png" alt="">
+            <div>Nesciunt, facilis!</div>
+            <div>20000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon03.png" alt="">
+            <div>Excepturi, odio.</div>
+            <div>12000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon04.png" alt="">
+            <div>Reiciendis, cumque.</div>
+            <div>100000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon05.png" alt="">
+            <div>Quia, ad!</div>
+            <div>70000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon06.png" alt="">
+            <div>Quisquam, architecto.</div>
+            <div>30000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon07.png" alt="">
+            <div>Incidunt, error.</div>
+            <div>50000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon08.png" alt="">
+            <div>Pariatur, unde!</div>
+            <div>34200</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon09.png" alt="">
+            <div>Nobis, odio.</div>
+            <div>55000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon10.png" alt="">
+            <div>Vitae, dignissimos!</div>
+            <div></div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon11.png" alt="">
+            <div>Placeat, dolor.</div>
+            <div>19900</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon12.png" alt="">
+            <div>Inventore, optio.</div>
+            <div>39900</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon13.png" alt="">
+            <div>Rem, tempore?</div>
+            <div>99900</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon14.png" alt="">
+            <div>Voluptatibus, dolorem?</div>
+            <div>89900</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon15.png" alt="">
+            <div>Sit, asperiores!</div>
+            <div>29500</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon16.png" alt="">
+            <div>Similique, eius!</div>
+            <div>15000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon17.png" alt="">
+            <div>Natus, sed.</div>
+            <div>25000</div>
+        </div>
+        <div class="item">
+            <img src="images/rect_icon18.png" alt="">
+            <div>Voluptatibus, itaque?</div>
+            <div>35000</div>
+        </div>
+    </div>
+
+    
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="ui/jquery-ui.js"></script>
+    <script>
+
+
+        $('.item > div:last-child').each((index, item) => {
+            $(item).text(parseInt($(item).text()).toLocaleString());
+        });
+
+        $('#price').slider({
+            range: true,
+            min: 10000,
+            max: 100000,
+            step: 1000,
+            values: [30000, 70000],
+            slide:function(event,ui){
+                // document.title = ui.value;
+                // document.title = ui.values[0] + ',' + ui.values[1];
+
+                $('#search > span > span').eq(0).text(ui.values[0].toLocaleString());
+                $('#search > span > span').eq(1).text(ui.values[1].toLocaleString());
+                
+                showItem(ui.values[0],ui.values[1]);
+               
+            }
+        });
+
+                function showItem(minPrice, maxPrice){
+                    $('#list .item').each((index, item) => {
+                    const price = parseInt($(item).children().last().text().replace(/,/g,''));
+
+                    
+
+                    if(price>= parseInt(minPrice) && price <= parseInt(maxPrice)) {
+                        $(item).show();
+                    }else {
+                        $(item).hide();
+                    }
+                });
+            }
+
+                showItem(30000,70000);
+
+    </script>
+</body>
+</html>
